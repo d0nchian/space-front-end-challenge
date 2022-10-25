@@ -22,17 +22,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
+    <link rel="stylesheet" href="./input.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/orbitcontrols.js"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
+              sans: ["serif", "sans-serif"],
               roboto: ["Roboto Flex", "sans-serif"],
             },
           },
@@ -66,7 +83,7 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-800 shadow-sm outline-none transition duration-300 ease-in-out"
+          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-black shadow-sm outline-none transition duration-300 ease-in-out"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
@@ -85,19 +102,25 @@
               />
             </button>
           </div>
-          <nav class="offcanvas-body flex h-full overflow-y-auto p-4">
-            <ul class="flex flex-col gap-4">
+          <nav
+            class="offcanvas-body font-roboto flex h-full overflow-y-auto p-4"
+          >
+            <ul class="flex flex-col gap-4 [&>*:hover]:text-blue-500">
               <li>
-                <a href="index.html"><span>00</span> Home</a>
+                <span>00</span>
+                <a href="index.html" class="opacity-50"> Home</a>
               </li>
               <li>
-                <a href="destination.html"><span>01</span> Destination</a>
+                <span>01</span>
+                <a href="destination.html" class="opacity-50">Destination</a>
               </li>
               <li>
-                <a href="crew.html"><span>02</span> Crew</a>
+                <span>02</span>
+                <a href="crew.html" class="opacity-50">Crew</a>
               </li>
               <li>
-                <a href="technology.html"><span>03</span> Technology</a>
+                <span>03</span>
+                <a href="technology.html" class="opacity-50">Technology</a>
               </li>
             </ul>
           </nav>
@@ -105,25 +128,29 @@
       </div>
 
       <!-- TABLET AND DESKTOP NAV-->
-      <div
-        class="tablet-nav hidden border-b bg-gray-700/20 p-4 backdrop-blur-md sm:block md:mr-32"
-      >
-        <nav>
-          <ul class="flex gap-4 text-sm">
-            <li>
-              <a href="index.html"><span class="hidden">00</span> Home</a>
+      <div class="tablet-nav hidden bg-gray-700/20 backdrop-blur-md sm:block">
+        <nav class="h-full">
+          <ul
+            class="flex gap-4 text-sm [&>*:hover]:text-blue-500 [&>*]:p-4 [&>*:active]:border-b"
+          >
+            <li class="swag">
+              <a href="index.html"
+                ><span class="hidden sm:inline-block">00</span> Home</a
+              >
             </li>
-            <li>
+            <li class="swag2">
               <a href="destination.html"
-                ><span class="hidden">01</span> Destination</a
+                ><span class="hidden sm:inline-block">01</span> Destination</a
               >
             </li>
             <li>
-              <a href="crew.html"><span class="hidden">02</span> Crew</a>
+              <a href="crew.html"
+                ><span class="hidden sm:inline-block">02</span> Crew</a
+              >
             </li>
             <li>
               <a href="technology.html"
-                ><span class="hidden">03</span> Technology</a
+                ><span class="hidden sm:inline-block">03</span> Technology</a
               >
             </li>
           </ul>
@@ -138,7 +165,7 @@
         <div class="flex flex-col gap-6 text-base md:text-lg lg:text-left">
           <p class="font-thin uppercase">So, you want to travel to</p>
           <h1
-            class="animate__animated animate__fadeInDown text-6xl uppercase lg:text-[150px]"
+            class="animate__animated animate__fadeInDown font-sans text-6xl uppercase lg:text-[150px]"
           >
             Space
           </h1>
@@ -151,13 +178,14 @@
         </div>
         <div>
           <button
-            class="h-32 w-32 rounded-full bg-white italic text-black lg:h-48 lg:w-48"
+            class="h-32 w-32 rounded-full bg-white italic text-black hover:bg-black hover:text-white lg:h-48 lg:w-48"
           >
             <a href="destination.html">EXPLORE</a>
           </button>
         </div>
       </div>
     </main>
+    <script src="./active.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
