@@ -52,7 +52,7 @@
       <!-- MOBILE HAMBURGER MENU -->
       <div class="sm:hidden">
         <button
-          class="mr-1.5 inline-block transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+          class="mr-1.5 inline-block transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasRight"
@@ -62,19 +62,23 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-end invisible fixed bottom-0 top-0 right-0 flex w-[50%] max-w-full flex-col border-none bg-clip-padding text-gray-700 shadow-sm outline-none transition duration-300 ease-in-out"
+          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-800 shadow-sm outline-none transition duration-300 ease-in-out"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
-          <div class="offcanvas-header flex items-center justify-end p-4">
+          <div class="offcanvas-header m-4 flex items-center justify-end">
             <button
               type="button"
-              class="btn-close text-green -my-5 -mr-2 box-content h-4 w-4 rounded-none border-none p-2 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+              class="first-letter:btn-close text-green mr-0 box-content h-6 w-6 rounded-none border-none outline hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-              <img src="./assets/shared/icon-close.svg" alt="" />
+              <img
+                class="block w-[100%]"
+                src="./assets/shared/icon-close.svg"
+                alt=""
+              />
             </button>
           </div>
           <nav class="offcanvas-body flex h-full overflow-y-auto p-4">
