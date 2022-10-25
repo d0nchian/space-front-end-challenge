@@ -34,6 +34,15 @@ const planetStats = {
   },
 };
 
+function clearActive(pList) {
+  pList.forEach((planet) => {
+    planet.classList.remove("font-bold");
+    planet.classList.remove("italic");
+    planet.classList.remove("underline");
+    planet.classList.remove("text-teal-300");
+  });
+}
+
 //ASSIGNING ALL ELEMENTS NEEDED TO CHANGE DATA
 let planetName = document.querySelector("#name");
 let planetParagraph = document.querySelector("#paragraph");
@@ -45,21 +54,21 @@ let planetPicture = document.querySelector("#planetPicture");
 
 //START OF DOM FUNCTIONALITY
 const planetList = document.querySelectorAll(".planet-list");
-console.log(planetList);
 let currentPlanet = "";
-
+// clearActive(planetList);
 planetList.forEach((planet) => {
   planet.addEventListener("click", function () {
-    currentPlanet = planet.innerHTML.toLowerCase();
+    currentPlanet = planet.innerHTML.toLowerCase().trim();
     console.log(currentPlanet);
     switch (currentPlanet) {
       case "europa":
+        clearActive(planetList);
         //name
         europaName = planetStats.europa.name;
         planetName.innerHTML = europaName;
         //paragraph
         europaPara = planetStats.europa.paragraph;
-        planetParagraph = europaPara;
+        planetParagraph.innerHTML = europaPara;
         //stats1
         europaStats = planetStats.europa.distance;
         planetDistance.innerHTML = europaStats;
@@ -68,15 +77,21 @@ planetList.forEach((planet) => {
         planetTravelTime.innerHTML = europaTime;
         //picure
         planetPicture.src = "./assets/destination/image-europa.webp";
+        //active state
+        document.querySelector("#europa").classList.add("font-bold");
+        document.querySelector("#europa").classList.add("italic");
+        document.querySelector("#europa").classList.add("underline");
+        document.querySelector("#europa").classList.add("text-teal-300");
 
         break;
       case "moon":
+        clearActive(planetList);
         //name
         moonName = planetStats.moon.name;
         planetName.innerHTML = moonName;
         //paragraph
         moonPara = planetStats.moon.paragraph;
-        planetParagraph = moonPara;
+        planetParagraph.innerHTML = moonPara;
         //stats1
         moonStats = planetStats.moon.distance;
         planetDistance.innerHTML = moonStats;
@@ -85,14 +100,20 @@ planetList.forEach((planet) => {
         planetTravelTime.innerHTML = moonTime;
         //picure
         planetPicture.src = "./assets/destination/image-moon.webp";
+        //active state
+        document.querySelector("#moon").classList.add("font-bold");
+        document.querySelector("#moon").classList.add("italic");
+        document.querySelector("#moon").classList.add("underline");
+        document.querySelector("#moon").classList.add("text-teal-300");
         break;
       case "mars":
+        clearActive(planetList);
         //name
         marsName = planetStats.mars.name;
         planetName.innerHTML = marsName;
         //paragraph
         marsPara = planetStats.mars.paragraph;
-        planetParagraph = marsPara;
+        planetParagraph.innerHTML = marsPara;
         //stats1
         marsStats = planetStats.mars.distance;
         planetDistance.innerHTML = marsStats;
@@ -101,14 +122,20 @@ planetList.forEach((planet) => {
         planetTravelTime.innerHTML = marsTime;
         //picure
         planetPicture.src = "./assets/destination/image-mars.webp";
+        //active state
+        document.querySelector("#mars").classList.add("font-bold");
+        document.querySelector("#mars").classList.add("italic");
+        document.querySelector("#mars").classList.add("underline");
+        document.querySelector("#mars").classList.add("text-teal-300");
         break;
       case "titan":
+        clearActive(planetList);
         //name
         titanName = planetStats.titan.name;
         planetName.innerHTML = titanName;
         //paragraph
         titanPara = planetStats.titan.paragraph;
-        planetParagraph = titanPara;
+        planetParagraph.innerHTML = titanPara;
         //stats1
         titanStats = planetStats.titan.distance;
         planetDistance.innerHTML = titanStats;
@@ -120,13 +147,13 @@ planetList.forEach((planet) => {
           .classList.add("animate__fadeIn");
         //picure
         planetPicture.src = "./assets/destination/image-titan.webp";
+        //active state
+        document.querySelector("#titan").classList.add("font-bold");
+        document.querySelector("#titan").classList.add("italic");
+        document.querySelector("#titan").classList.add("underline");
+        document.querySelector("#titan").classList.add("text-teal-300");
         break;
     }
-    document
-      .querySelector("#planetPicture")
-      .classList.remove("animate__fadeIn");
-    document.querySelector("#planetPicture").classList.add("animate__fadeIn");
   });
 });
-
 console.log(currentPlanet);

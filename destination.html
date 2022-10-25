@@ -83,7 +83,7 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-800 shadow-sm outline-none transition duration-300 ease-in-out"
+          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-900 shadow-sm outline-none transition duration-300 ease-in-out"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
@@ -105,18 +105,22 @@
           <nav
             class="offcanvas-body font-roboto flex h-full overflow-y-auto p-4"
           >
-            <ul class="flex flex-col gap-4">
+            <ul class="flex flex-col gap-4 [&>*:hover]:text-teal-300">
               <li>
-                <a href="index.html"><span>00</span> Home</a>
+                <span>00</span>
+                <a href="index.html" class="opacity-50"> Home</a>
               </li>
               <li>
-                <a href="destination.html"><span>01</span> Destination</a>
+                <span>01</span>
+                <a href="destination.html" class="opacity-50">Destination</a>
               </li>
               <li>
-                <a href="crew.html"><span>02</span> Crew</a>
+                <span>02</span>
+                <a href="crew.html" class="opacity-50">Crew</a>
               </li>
               <li>
-                <a href="technology.html"><span>03</span> Technology</a>
+                <span>03</span>
+                <a href="technology.html" class="opacity-50">Technology</a>
               </li>
             </ul>
           </nav>
@@ -127,28 +131,32 @@
       <div class="tablet-nav hidden bg-gray-700/20 backdrop-blur-md sm:block">
         <nav class="h-full">
           <ul
-            class="flex gap-4 text-sm [&>*:hover]:text-blue-500 [&>*]:p-4 [&>*:active]:border-b"
+            class="flex gap-4 text-sm [&>*:hover]:text-teal-300 [&>*]:p-4 [&>*:active]:border-b"
           >
-            <li class="swag">
-              <a href="index.html"
-                ><span class="hidden sm:inline-block">00</span> Home</a
-              >
-            </li>
-            <li class="swag2">
-              <a href="destination.html"
-                ><span class="hidden sm:inline-block">01</span> Destination</a
-              >
-            </li>
-            <li>
-              <a href="crew.html"
-                ><span class="hidden sm:inline-block">02</span> Crew</a
-              >
-            </li>
-            <li>
-              <a href="technology.html"
-                ><span class="hidden sm:inline-block">03</span> Technology</a
-              >
-            </li>
+            <a href="./index.html" class="swag" id="home">
+              <li>
+                <span class="hidden sm:inline-block">00</span>
+                <p class="font-light opacity-70 inline-block">Home</p>
+              </li>
+            </a>
+            <a href="./destination.html" id="destination" class="swag2">
+              <li>
+                <span class="hidden sm:inline-block">01</span>
+                <p class="font-light opacity-70 inline-block">Destination</p>
+              </li>
+            </a>
+            <a href="./crew.html" id="crew" class="swag3">
+              <li>
+                <span class="hidden sm:inline-block">02</span>
+                <p class="font-light opacity-70 inline-block">Crew</p>
+              </li>
+            </a>
+            <a href="./technology.html" id="technology" class="swag4">
+              <li>
+                <span class="hidden sm:inline-block">03</span>
+                <p class="font-light opacity-70 inline-block">Technology</p>
+              </li>
+            </a>
           </ul>
         </nav>
       </div>
@@ -158,13 +166,13 @@
     <main class="m-6 h-[80vh]">
       <!-- HOME INFORMATION -->
       <div
-        class="home container mx-auto flex h-full flex-col items-center justify-center text-center md:flex-row md:items-end lg:justify-center lg:px-[5%] lg:pb-[5%]"
+        class="home container mx-auto flex h-full flex-col items-center justify-center text-center  md:flex-row md:items-end lg:justify-center lg:px-[5%] lg:pb-[5%] "
       >
         <div
-          class="flex h-[50%] w-[100%] flex-col gap-6 text-center text-base md:h-[100%] md:w-[50%] md:text-lg lg:text-left"
+          class="flex h-[50%] w-[100%] flex-col gap-6  text-center text-sm md:h-[100%] md:w-[50%] md:text-lg lg:text-left"
         >
-          <p class="mx-auto font-light uppercase outline md:pt-[12%]">
-            <span class="mr-2 text-gray-600/80">01</span> Pick your destination
+          <p class="font-light uppercase lg:mt-36 lg:pl-32">
+            <span class="mr-2 text-gray-300">01</span> Pick your destination
           </p>
           <img
             id="planetPicture"
@@ -174,71 +182,54 @@
           />
         </div>
         <div
-          class="flex h-[50%] max-w-md flex-col gap-4 text-start text-xs md:h-[70%] md:w-[50%] md:text-base lg:my-0"
+          class="flex h-[50%] max-w-md flex-col gap-4 text-start text-xsoutline md:h-[70%] md:w-[50%] md:text-base lg:my-0"
         >
-          <nav>
+          <nav class="">
             <ul
-              class="group flex shrink cursor-pointer justify-start gap-3 backdrop-blur-md"
+              class="group flex w-fit shrink cursor-pointer justify-start gap-3 p-3 font-thin backdrop-blur-md [&>*:hover]:underline [&>*:active]:font-bold [&>*:active]:italic [&>*:focus]:text-teal-500"
             >
-              <li class="planet-list">MOON</li>
-              <li class="planet-list">MARS</li>
-              <li class="planet-list">EUROPA</li>
-              <li class="planet-list">TITAN</li>
+              <li
+                id="moon"
+                class="planet-list font-bold italic text-teal-300 underline"
+              >
+                MOON
+              </li>
+              <li id="mars" class="planet-list">MARS</li>
+              <li id="europa" class="planet-list">EUROPA</li>
+              <li id="titan" class="planet-list">TITAN</li>
             </ul>
           </nav>
-          <h1 id="name" class="font-sans text-6xl uppercase md:text-[100px]">
-            MARS
-          </h1>
-          <p id="paragraph" class="max-w-xs">
-            Don’t forget to pack your hiking boots. You’ll need them to tackle
-            Olympus Mons, the tallest planetary mountain in our solar system.
-            It’s two and a half times the size of Everest!
-          </p>
-          <div class="flex items-start gap-4 border-t pt-4">
-            <section>
-              <p class="font-thin">AVG. DISTANCE</p>
-              <p id="distance" class="text-lg uppercase md:text-2xl">
-                225 MIL. KM
-              </p>
-            </section>
-            <section class="">
-              <p class="font-thin">EST. TRAVEL TIME</p>
-              <p id="travelTime" class="text-lg uppercase md:text-2xl">
-                9 MONTHS
-              </p>
-            </section>
+          <section class="flex-col flex gap-3 shadow-[-1px_1px_8px_5px_rgba(13,148,136,0.75)] p-2">
+            <h1 id="name" class="font-sans text-6xl uppercase md:text-[100px]">
+              MOON
+            </h1>
+            <p id="paragraph" class="max-w-xs font-thin">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed. While
+              you’re there, take in some history by visiting the Luna 2 and Apollo
+              11 landing sites.
+            </p>
+            <div class="flex items-start gap-4 border-t pt-4">
+              <section>
+                <p class="text-sm font-thin">AVG. DISTANCE</p>
+                <p id="distance" class="font-sans text-lg uppercase md:text-2xl">
+                  384,400 KM
+                </p>
+              </section>
+              <section class="">
+                <p class="text-sm font-thin">EST. TRAVEL TIME</p>
+                <p
+                  id="travelTime"
+                  class="font-sans text-lg uppercase md:text-2xl"
+                >
+                  3 DAYS
+                </p>
+              </section>
+          </section>
           </div>
         </div>
       </div>
     </main>
-    <!-- <main class="m-6 h-[80vh] outline">
-      <div
-        class="home container mx-auto flex h-full flex-col items-center justify-center gap-28 bg-red-400 pt-10 text-center outline lg:flex-row lg:items-end lg:justify-between lg:px-[5%] lg:pb-[5%]"
-      >
-        <div class="flex flex-col gap-6 text-base md:text-lg lg:text-left">
-          <p class="font-thin uppercase">So, you want to travel to</p>
-          <h1
-            class="animate__animated animate__fadeIn text-6xl uppercase lg:text-[150px]"
-          >
-            Space
-          </h1>
-          <p class="max-w-sm font-thin">
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
-        </div>
-        <div>
-          <button
-            class="h-32 w-32 rounded-full bg-white italic text-black lg:h-48 lg:w-48"
-          >
-            EXPLORE
-          </button>
-        </div>
-      </div>
-
-    </main> -->
     <script src="./planet-script.js"></script>
     <script src="./active.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>

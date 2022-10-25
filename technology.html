@@ -63,14 +63,17 @@
     class="font-roboto bg h-screen bg-[url('./assets/technology/background-technology-mobile.jpg')] bg-cover bg-center bg-no-repeat text-white sm:bg-[url('./assets/technology/background-technology-tablet.jpg')] md:bg-[url('./assets/technology/background-technology-desktop.jpg')]"
   >
     <!-- MAIN HEADER -->
-    <!-- MAIN HEADER -->
     <header class="m-2 flex items-center justify-between md:m-8">
-      <div><img src="./assets/shared/logo.svg" alt="main logo" /></div>
+      <div>
+        <a href="./index.html">
+          <img src=" ./assets/shared/logo.svg" alt="main logo" />
+        </a>
+      </div>
 
       <!-- MOBILE HAMBURGER MENU -->
       <div class="sm:hidden">
         <button
-          class="mr-1.5 inline-block transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+          class="mr-1.5 inline-block transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasRight"
@@ -80,34 +83,44 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-end invisible fixed bottom-0 top-0 right-0 flex w-[50%] max-w-full flex-col border-none bg-gray-400 bg-clip-padding text-gray-700 shadow-sm outline-none transition duration-300 ease-in-out"
+          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-900 shadow-sm outline-none transition duration-300 ease-in-out"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
-          <div class="offcanvas-header flex items-center justify-end p-4">
+          <div class="offcanvas-header m-4 flex items-center justify-end">
             <button
               type="button"
-              class="btn-close text-green -my-5 -mr-2 box-content h-4 w-4 rounded-none border-none p-2 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+              class="first-letter:btn-close text-green mr-0 box-content h-6 w-6 rounded-none border-none outline hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-              <img src="./assets/shared/icon-close.svg" alt="" />
+              <img
+                class="block w-[100%]"
+                src="./assets/shared/icon-close.svg"
+                alt=""
+              />
             </button>
           </div>
-          <nav class="offcanvas-body flex h-full overflow-y-auto p-4">
-            <ul class="flex flex-col gap-4">
+          <nav
+            class="offcanvas-body font-roboto flex h-full overflow-y-auto p-4"
+          >
+            <ul class="flex flex-col gap-4 [&>*:hover]:text-teal-300">
               <li>
-                <a href="index.html"><span>00</span> Home</a>
+                <span>00</span>
+                <a href="index.html" class="opacity-50"> Home</a>
               </li>
               <li>
-                <a href="destination.html"><span>01</span> Destination</a>
+                <span>01</span>
+                <a href="destination.html" class="opacity-50">Destination</a>
               </li>
               <li>
-                <a href="crew.html"><span>02</span> Crew</a>
+                <span>02</span>
+                <a href="crew.html" class="opacity-50">Crew</a>
               </li>
               <li>
-                <a href="technology.html"><span>03</span> Technology</a>
+                <span>03</span>
+                <a href="technology.html" class="opacity-50">Technology</a>
               </li>
             </ul>
           </nav>
@@ -115,33 +128,41 @@
       </div>
 
       <!-- TABLET AND DESKTOP NAV-->
-      <div
-        class="tablet-nav hidden border-b bg-gray-700/20 p-4 backdrop-blur-md sm:block md:mr-32"
-      >
-        <nav>
-          <ul class="flex gap-4 text-sm">
-            <li>
-              <a href="index.html"><span class="hidden">00</span> Home</a>
-            </li>
-            <li>
-              <a href="destination.html"
-                ><span class="hidden">01</span> Destination</a
-              >
-            </li>
-            <li>
-              <a href="crew.html"><span class="hidden">02</span> Crew</a>
-            </li>
-            <li>
-              <a href="technology.html"
-                ><span class="hidden">03</span> Technology</a
-              >
-            </li>
+      <div class="tablet-nav hidden bg-gray-700/20 backdrop-blur-md sm:block">
+        <nav class="h-full">
+          <ul
+            class="flex gap-4 text-sm [&>*:hover]:text-teal-300 [&>*]:p-4 [&>*:active]:border-b"
+          >
+            <a href="./index.html" class="swag" id="home">
+              <li>
+                <span class="hidden sm:inline-block">00</span>
+                <p class="inline-block font-light opacity-70">Home</p>
+              </li>
+            </a>
+            <a href="./destination.html" id="destination" class="swag2">
+              <li>
+                <span class="hidden sm:inline-block">01</span>
+                <p class="inline-block font-light opacity-70">Destination</p>
+              </li>
+            </a>
+            <a href="./crew.html" id="crew" class="swag3">
+              <li>
+                <span class="hidden sm:inline-block">02</span>
+                <p class="inline-block font-light opacity-70">Crew</p>
+              </li>
+            </a>
+            <a href="./technology.html" id="technology" class="swag4">
+              <li>
+                <span class="hidden sm:inline-block">03</span>
+                <p class="inline-block font-light opacity-70">Technology</p>
+              </li>
+            </a>
           </ul>
         </nav>
       </div>
     </header>
     <p class="top-10 pt-3 text-center text-sm font-light uppercase lg:hidden">
-      <span class="mr-2 text-base text-gray-600/80">03</span> SPACE LAUNCH 101
+      <span class="mr-2 text-gray-300">03</span> SPACE LAUNCH 101
     </p>
     <!-- MAIN CONTENT-->
     <main
@@ -162,10 +183,9 @@
         class="relative flex h-[80%] w-[100%] flex-col items-center justify-center md:flex-row-reverse"
       >
         <p
-          class="absolute top-0 left-32 hidden text-lg font-light uppercase lg:block"
+          class="absolute top-16 left-36 hidden text-lg font-light uppercase lg:block"
         >
-          <span class="mr-2 text-base text-gray-600/80">03</span> SPACE LAUNCH
-          101
+          <span class="mr-2 text-gray-300">03</span> SPACE LAUNCH 101
         </p>
 
         <div class="md:w-[40%]">
@@ -198,7 +218,7 @@
             sight on the launch pad!
           </p>
         </div>
-        <div class="spaceport m-4 mx-auto flex hidden max-w-sm flex-col gap-4">
+        <div class="spaceport m-4 mx-auto hidden max-w-sm flex-col gap-4">
           <p class="font-sans text-lg uppercase opacity-80 lg:mt-32 lg:text-xl">
             The terminology...
           </p>
@@ -209,11 +229,11 @@
             A spaceport or cosmodrome is a site for launching (or receiving)
             spacecraft, by analogy to the seaport for ships or airport for
             aircraft. Based in the famous Cape Canaveral, our spaceport is
-            ideally situated to take advantage of the Earth’s rotation for
+            ideally situated to take advantage of the Earths rotation for
             launch.
           </p>
         </div>
-        <div class="capsule m-4 mx-auto flex hidden max-w-sm flex-col gap-4">
+        <div class="capsule m-4 mx-auto hidden max-w-sm flex-col gap-4">
           <p class="font-sans text-lg uppercase opacity-80 lg:mt-32 lg:text-xl">
             The terminology...
           </p>
@@ -243,7 +263,7 @@
         </section>
       </section>
     </main>
-
+    <script src="./active.js"></script>
     <script src="./planet-script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>

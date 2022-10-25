@@ -43,6 +43,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -83,7 +84,7 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-black shadow-sm outline-none transition duration-300 ease-in-out"
+          class="offcanvas offcanvas-end bg-clip-paddin invisible fixed bottom-0 top-0 right-0 flex w-[50%] flex-col border-none bg-gray-900 shadow-sm outline-none transition duration-300 ease-in-out"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
@@ -105,7 +106,7 @@
           <nav
             class="offcanvas-body font-roboto flex h-full overflow-y-auto p-4"
           >
-            <ul class="flex flex-col gap-4 [&>*:hover]:text-blue-500">
+            <ul class="flex flex-col gap-4 [&>*:hover]:text-teal-300">
               <li>
                 <span>00</span>
                 <a href="index.html" class="opacity-50"> Home</a>
@@ -131,28 +132,32 @@
       <div class="tablet-nav hidden bg-gray-700/20 backdrop-blur-md sm:block">
         <nav class="h-full">
           <ul
-            class="flex gap-4 text-sm [&>*:hover]:text-blue-500 [&>*]:p-4 [&>*:active]:border-b"
+            class="flex gap-4 text-sm [&>*:hover]:text-teal-300 [&>*]:p-4 [&>*:active]:border-b"
           >
-            <li class="swag">
-              <a href="index.html"
-                ><span class="hidden sm:inline-block">00</span> Home</a
-              >
-            </li>
-            <li class="swag2">
-              <a href="destination.html"
-                ><span class="hidden sm:inline-block">01</span> Destination</a
-              >
-            </li>
-            <li>
-              <a href="crew.html"
-                ><span class="hidden sm:inline-block">02</span> Crew</a
-              >
-            </li>
-            <li>
-              <a href="technology.html"
-                ><span class="hidden sm:inline-block">03</span> Technology</a
-              >
-            </li>
+            <a href="./index.html" class="swag" id="home">
+              <li>
+                <span class="hidden sm:inline-block">00</span>
+                <p class="inline-block font-light opacity-70">Home</p>
+              </li>
+            </a>
+            <a href="./destination.html" id="destination" class="swag2">
+              <li>
+                <span class="hidden sm:inline-block">01</span>
+                <p class="inline-block font-light opacity-70">Destination</p>
+              </li>
+            </a>
+            <a href="./crew.html" id="crew" class="swag3">
+              <li>
+                <span class="hidden sm:inline-block">02</span>
+                <p class="inline-block font-light opacity-70">Crew</p>
+              </li>
+            </a>
+            <a href="./technology.html" id="technology" class="swag4">
+              <li>
+                <span class="hidden sm:inline-block">03</span>
+                <p class="inline-block font-light opacity-70">Technology</p>
+              </li>
+            </a>
           </ul>
         </nav>
       </div>
@@ -165,7 +170,7 @@
         <div class="flex flex-col gap-6 text-base md:text-lg lg:text-left">
           <p class="font-thin uppercase">So, you want to travel to</p>
           <h1
-            class="animate__animated animate__fadeInDown font-sans text-6xl uppercase lg:text-[150px]"
+            class="space animate__animated animate__fadeInDown font-sans text-6xl uppercase lg:text-[150px]"
           >
             Space
           </h1>
@@ -178,14 +183,16 @@
         </div>
         <div>
           <button
-            class="h-32 w-32 rounded-full bg-white italic text-black hover:bg-black hover:text-white lg:h-48 lg:w-48"
+            class="h-32 w-32 rounded-full bg-white italic text-black transition delay-100 ease-in-out hover:bg-teal-700 hover:text-teal-300 lg:h-48 lg:w-48"
           >
             <a href="destination.html">EXPLORE</a>
           </button>
         </div>
       </div>
     </main>
+    <!-- <script src="./gsapAnimations.js"></script> -->
     <script src="./active.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
+<!--animate__animated animate__fadeInDown-->
