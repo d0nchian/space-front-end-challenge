@@ -191,26 +191,30 @@
         <div class="md:w-[40%]">
           <picture class="">
             <source
+              class="bigPic"
               media="(min-width: 760px)"
               srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
             />
             <img
               src="./assets/technology/image-launch-vehicle-landscape.jpg"
               alt=""
-              class="mx-auto max-h-[170px] w-full md:h-[60%] md:max-h-[70%] md:w-[350px]"
+              class="littlePic mx-auto max-h-[170px] w-full md:h-[60%] md:max-h-[70%] md:w-[350px]"
             />
           </picture>
         </div>
         <div
-          class="vehicle h-300px flex max-w-sm flex-col justify-center gap-4 px-6 md:w-[40%]"
+          id="launch"
+          class="technology vehicle h-300px flex max-w-sm flex-col justify-center gap-4 px-6 md:w-[40%]"
         >
-          <p class="font-sans text-sm uppercase opacity-80">
+          <p class="pt-8 font-sans text-sm uppercase opacity-80">
             The terminology...
           </p>
-          <h1 class="mt-2 font-sans text-2xl font-bold uppercase lg:text-4xl">
+          <h1
+            class="tech-title mt-2 font-sans text-2xl font-bold uppercase lg:text-4xl"
+          >
             Launch vehicle
           </h1>
-          <p class="font-thin lg:mt-8 lg:text-base">
+          <p class="para font-thin lg:mt-8 lg:text-base">
             A launch vehicle or carrier rocket is a rocket-propelled vehicle
             used to carry a payload from Earth's surface to space, usually to
             Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful
@@ -218,51 +222,28 @@
             sight on the launch pad!
           </p>
         </div>
-        <div class="spaceport m-4 mx-auto hidden max-w-sm flex-col gap-4">
-          <p class="font-sans text-lg uppercase opacity-80 lg:mt-32 lg:text-xl">
-            The terminology...
-          </p>
-          <h1 class="mt-2 font-sans text-2xl font-bold uppercase lg:text-4xl">
-            Spaceport
-          </h1>
-          <p class="font-thin lg:mt-8 lg:max-w-xs lg:text-base">
-            A spaceport or cosmodrome is a site for launching (or receiving)
-            spacecraft, by analogy to the seaport for ships or airport for
-            aircraft. Based in the famous Cape Canaveral, our spaceport is
-            ideally situated to take advantage of the Earths rotation for
-            launch.
-          </p>
-        </div>
-        <div class="capsule m-4 mx-auto hidden max-w-sm flex-col gap-4">
-          <p class="font-sans text-lg uppercase opacity-80 lg:mt-32 lg:text-xl">
-            The terminology...
-          </p>
-          <h1 class="mt-2 font-sans text-2xl font-bold uppercase lg:text-4xl">
-            Space capsule
-          </h1>
-          <p class="font-thin lg:mt-8 lg:max-w-xs lg:text-base">
-            A space capsule is an often-crewed spacecraft that uses a blunt-body
-            reentry capsule to reenter the Earth's atmosphere without wings. Our
-            capsule is where you'll spend your time during the flight. It
-            includes a space gym, cinema, and plenty of other activities to keep
-            you entertained.
-          </p>
-        </div>
         <section
           class="mr-8 hidden justify-center gap-6 lg:ml-8 lg:flex lg:flex-col"
         >
-          <button class="h-12 w-12 rounded-full bg-red-500 lg:h-16 lg:w-16">
+          <button
+            class="btn btn1 h-12 w-12 rounded-full bg-gray-700 shadow-[-1px_1px_8px_5px_rgba(13,148,136,0.75)inset] lg:h-16 lg:w-16"
+          >
             1
           </button>
-          <button class="h-12 w-12 rounded-full bg-red-500 lg:h-16 lg:w-16">
+          <button
+            class="btn btn2 h-12 w-12 rounded-full bg-gray-700 lg:h-16 lg:w-16"
+          >
             2
           </button>
-          <button class="h-12 w-12 rounded-full bg-red-500 lg:h-16 lg:w-16">
+          <button
+            class="btn btn3 h-12 w-12 rounded-full bg-gray-700 lg:h-16 lg:w-16"
+          >
             3
           </button>
         </section>
       </section>
     </main>
+    <script src="./technology.js"></script>
     <script src="./active.js"></script>
     <script src="./planet-script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
